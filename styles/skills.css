@@ -1,0 +1,261 @@
+.main-skills{
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    right: 10%;
+    overflow: none;                           /* Should revisit this */
+    /*border: solid 5px lightgrey;
+    padding: 30px; */
+}
+
+
+/*      Technical Skills TITLE      */
+
+.technical-skills{
+    font-size: 2.2em;
+    text-decoration: underline;
+    margin-bottom: 60px;
+    margin-top: 20px;
+    margin-left: 90px;
+   /* animation: technicalSkills 20s infinite linear; */
+    text-align: center;
+}
+
+.technical-skills:hover{
+    cursor: pointer;
+}
+
+@keyframes technicalSkills{
+    0% {
+        color: orangered;
+    }
+    20% {
+        color: aqua;
+    }
+    40% {
+        color: yellow;
+    }
+    60% {
+        color: blue;
+    }
+    80% {
+        color: orange;
+    }
+    100% {
+        color: orangered;
+    }
+}  
+
+
+/*      REGIONS CONTAINERS      */
+
+.first-cointainer{
+    position: absolute;
+    left: 0;
+}
+
+.second-container{
+   position: absolute;
+   right: 0;
+   top: 500px;
+}
+
+.third-container{
+    position: absolute;
+    left: 0;
+    top: 830px;
+}
+
+
+/*      SKILL INFO ( Web development, Graphic designer )     */
+
+.skill-division{
+    margin: 20px;
+    font-size: 1.7em;
+    display: inline-block;
+}
+
+.skill-division:hover{
+    cursor: pointer;
+    color: #CBD2D0;
+}
+
+.front-end-container, .graphic-design-container, .game-development-container{
+    border: solid 5px lightgrey;
+    padding: 30px;
+    width: 500px;
+}
+
+.region, .last-region{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-bottom: 30px;
+}
+
+.last-region{
+    margin-bottom: 0;
+}
+
+
+/*      NAMED SKILL      */
+
+.skill-box{
+    display: flex;
+    margin-right: 56px;
+}
+
+.skill, .skill-UE4{
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.skill-UE4{
+    font-size: 0.8em;
+}
+
+
+/*      BARS STYLES      */
+
+.bar1, .bar2, .bar3, .bar4, .bar5, .bar6, .bar7{
+    /* border: solid 1px white; */
+    border-right: solid 1px white;
+    width: 100%;
+    height: 20px;
+}
+
+.bar1{
+    margin-left: -11px;
+}
+
+.bar3{
+    margin-left: -47px;
+}
+
+.bar4{
+    margin-left: -42px;
+}
+
+.bar5{
+    margin-left: -35px;
+}
+
+.bar6{
+    margin-left: -36px;
+}
+
+.bar7{
+    margin-left: -39px;
+}
+
+.bar1-exp, .bar2-exp, .bar3-exp, .bar4-exp, .bar5-exp, .bar6-exp, .bar7-exp{
+    position: relative;
+    height: 20px;
+}
+
+.bar1-exp{
+    background-color: orangered;
+    width: 80%;
+}
+
+.bar2-exp{
+    background-color: aqua;
+    width: 75%;   
+}
+
+.bar3-exp{
+    background-color: yellow;
+    width: 50%;
+}
+
+.bar4-exp{
+    background-color: blue;
+    width: 60%;
+}
+
+.bar5-exp{
+    background-color: orange;
+    width: 50%;
+}
+
+.bar6-exp{
+    background-color: lightgreen;
+    width: 50%;
+}
+
+.bar7-exp{
+    background-color: red;
+    width: 65%;
+}
+
+.bar1-exp:hover, .bar2-exp:hover, .bar3-exp:hover, .bar4-exp:hover, .bar5-exp:hover, .bar6-exp:hover, .bar7-exp:hover{
+   cursor: pointer;
+} 
+
+
+
+/*      HOVER OVER KNOWLEDGE BAR      */
+
+.HTML5-hover, .CSS3-hover, .javascript-hover, .photoshop-hover, .illustrator-hover, .UE4-hover, .Cplusplus-hover{
+    position: absolute;
+    /*background-color: #9AA899; */
+    color: white;
+    top: 0;
+    bottom: 0;
+    right: -55px;
+    opacity: 0;
+    transition: all 1.6s ease;
+    font-weight: bold;
+}
+
+.bar1-exp:hover .HTML5-hover,
+.bar2-exp:hover .CSS3-hover,
+.bar3-exp:hover .javascript-hover,
+.bar4-exp:hover .photoshop-hover,
+.bar5-exp:hover .illustrator-hover,
+.bar6-exp:hover .UE4-hover,
+.bar7-exp:hover .Cplusplus-hover{
+    opacity: 1;
+}
+
+
+
+/*      BUTTONS      */
+
+.buttons-div{
+    position: absolute;
+    top: 1200px;
+    left: 36%;
+    right: 36%;
+    /* background-color: lightgrey; */
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttons-div button{
+    padding: 8px 16px;
+    background: black;
+    color: white;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    border: solid 1px transparent;
+    transition: all 0.6s ease;
+    font-size: 1.3em;
+}
+
+.buttons-div button:first-child{
+    margin-right: 16px;
+}
+
+.buttons-div button:last-child{
+    margin-left: 16px;
+}
+
+.buttons-div button:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border: solid 1px white;
+}

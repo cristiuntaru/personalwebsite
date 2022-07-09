@@ -1,0 +1,297 @@
+.main{
+    color: white;
+    position: absolute;
+    top: 120px;
+    left: 20%;
+    right: 20%;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-and-stats{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.stats{
+    margin-right: 50px;
+}
+
+main span{
+   /* color: lightblue; */
+    margin-left: 10px;
+    transition: all 0.3s ease;
+    animation: coloring 10s infinite linear;
+}
+
+main span:hover{
+    cursor: pointer;
+}
+
+.introduction-name{
+    font-size: 2em;
+    padding-bottom: 30px;
+}
+
+.attributes{
+    display: block;
+}
+
+.introduction-description{
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    margin-left: 12px;
+}
+
+.introduction-description:hover{
+    cursor: pointer;
+    color: #CBD2D0;
+    font-size: 1.4em;
+}
+
+.myphoto{
+   width: 200px;
+   height: 200px;
+   object-fit: cover;
+   object-position: top;
+   border-radius: 50%;
+   margin-top: 20px;
+}
+
+.myphoto:hover{
+    cursor: pointer;
+    animation: photoCircle 3s infinite linear;
+}
+
+.myphoto:active{
+    animation: photoJump 2s infinite linear;
+}
+
+.buttons-div{
+    margin-top: 16px;
+}
+
+.buttons-div a{
+    text-decoration: none;
+    color: white;
+}
+
+.buttons-div button{
+    padding: 8px 16px;
+    background: black;
+    color: white;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    border: solid 1px transparent;
+    transition: all 0.6s ease;
+    font-size: 1.3em;
+}
+
+.buttons-div button:first-child{
+    margin-right: 15px;
+}
+
+.buttons-div button:last-child{
+    margin-left: 15px;
+}
+
+.buttons-div button:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border: solid 1px white;
+}
+
+@keyframes coloring{
+    0% {
+        color: lightblue;
+    }
+    20% {
+        color: aqua;
+    }
+    40% {
+        color: red;
+    }
+    60% {
+        color: orange;
+    }
+    80% {
+        color: yellow;
+    }
+    100% {
+        color: lightblue;
+    }
+}
+
+
+@keyframes photoCircle{
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes photoJump{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes photoRightLeft{
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(70%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(-70%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+@media (max-width: 1225px) {
+    .introduction-name{
+        font-size: 1.7em;
+    }
+
+    .introduction-description{
+        font-size: 1.1em;
+        margin-bottom: 10px;
+        margin-left: 12px;
+    }
+
+}
+
+@media (max-width: 953px) {
+    main span{
+        margin-left: 0;
+        display: block;
+        transition: none;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .image-and-stats{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        align-items: center;
+    } 
+
+    .stats{
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .introduction-name{
+        font-size: 2em;
+        padding-bottom: 30px;
+    }
+
+    .myphoto:active{
+        animation: photoRightLeft 6s infinite linear;
+    }
+
+    .buttons-div button:first-child{
+        margin-right: 15px;
+    }
+    
+    .buttons-div button:last-child{
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .introduction-name{
+        font-size: 2em;
+        padding-bottom: 30px;
+    }
+
+    .buttons-div{
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons-div button:first-child{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .buttons-div button:last-child{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .main{
+        top: 100px;
+        left: 5%;
+        right: 5%;
+    }
+
+    .image-and-stats{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        align-items: center;
+    } 
+
+    .stats{
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .introduction-name{
+        font-size: 2em;
+        padding-bottom: 30px;
+    }
+
+    .myphoto:hover{
+        cursor: pointer;
+        animation: none;
+    }
+    
+    .myphoto:active{
+        animation: none;
+    }
+
+    .buttons-div{
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons-div button:first-child{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .buttons-div button:last-child{
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,163 @@
+.header{
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   display: flex;
+   color: white;
+   background: rgba(0, 0, 0, 1);
+   align-items: center;
+   vertical-align: middle;
+   justify-content: space-around;
+   /*box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); */
+   z-index: 10;
+   width: 100%;
+}
+
+.logo{
+    margin-left: 150px;
+}
+
+.navigation{
+    display: flex;
+}
+
+.navigation-div-active{
+    border: solid 1px transparent;
+    transition: all 0.25s;
+    border-bottom: solid 1px rgb(239, 35, 60);
+}
+
+.navigation-div{
+    border: solid 1px transparent;
+    transition: all 0.25s;
+}
+
+.navigation-div:hover{
+   background: rgb(30, 30, 30);
+   cursor: pointer;
+   border-bottom: solid 1px rgb(239, 35, 60);
+}
+
+.navigation-div a, .navigation-div-active a{
+    color: white;
+    text-decoration: none;
+}
+
+.navigation-item{
+    padding: 20px 34px;
+}
+
+
+
+.header-small-box{
+   /* background-color: gray; */
+    border: solid 1px transparent;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.header-small-box:hover{
+    cursor: pointer;
+    background: rgb(30, 30, 30);
+}
+
+.header-small-image{
+    width: 20px;
+    margin: 24px 34px 15px 34px;
+}
+
+.header-small-image:hover{
+    cursor: pointer;
+}
+
+.header-small-box:active .more-icon-pressed{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
+
+/*       MORE ICON PRESSED    (on small width)         */
+
+
+.more-icon-pressed {
+    position: absolute;
+    background-color: rgba(20, 20, 20, 1);
+    top: -100px;
+    bottom: 0;
+    left: calc(0px + -6%);
+    right: calc(0px + -6%);
+    z-index: 100;
+    opacity: 1;
+    /*pointer-events: none;*/
+}
+
+.close-box{
+   display: flex;
+   justify-content: end;
+}
+
+.close-image {
+    width: 25px;
+    padding: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.close-image:hover {
+    cursor: pointer;
+    background-color: rgba(30, 30, 30, 1);
+}
+
+.page {
+    padding: 24px 20px;
+    font-size: 1.6em;
+}
+
+.page:hover {
+    cursor: pointer;
+    background-color: rgba(30, 30, 30, 1);
+}
+
+
+
+
+
+/*           MEDIA QUERIS       */
+
+
+@media (max-width: 880px) {
+    
+    .header{
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        justify-content: space-around;
+        width: 100%;
+    } 
+
+    .logo{
+        font-size: 1.2em;
+        margin-left: 0;
+    }
+
+
+    .header-small-box{
+       opacity: 1;
+       pointer-events: all;
+    }
+
+    .navigation-div, .navigation-div-active{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .navigation{
+        width: 60px;
+    }
+}
